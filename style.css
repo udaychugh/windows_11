@@ -1,0 +1,404 @@
+@font-face{
+    font-family: seougeui;
+    src: url(assests/fonts/Segoe_UI.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: seougeui;
+    background-image: url(assests/bg.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.warning{
+    display: none;
+    color: white;
+    text-align: center;
+    font-size: 7vh;
+}
+
+.taskbar{
+    background-color: #f3f3f3;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    z-index: 110;
+    justify-content: center;
+    
+}
+
+.imgFlex img{
+    width: 24px;
+    padding: 8px;
+}
+
+
+.rightData{
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    height: 85%;
+}
+
+.rightData i{
+    padding: 8px;
+}
+
+.rightData p{
+    padding: 8px;
+    font-size: 12px;
+}
+
+.imgFlex img:hover,
+.rightData i:hover,
+.rightData p:hover{
+    background-color: #ffffff;    
+    cursor: context-menu;
+}
+
+.container{
+    display: flex;
+    justify-content: center;   
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.startMenu{
+    height: auto;
+    width: 630px;
+    max-height: 653px;
+    max-width: 630px;
+    background-color: #f6f6f6;
+    padding: 25px;    
+    border-radius: 10px;
+    position: absolute; 
+    bottom: 50px;
+    transition: all 0.3s ease-in;
+    
+}
+
+.searchMenu{
+    height: auto;
+    width: 630px;
+    max-height: 653px;
+    max-width: 630px;
+    background-color: #f6f6f6;
+    padding: 25px;    
+    border-radius: 10px;
+    position: absolute; 
+    bottom: 50px;
+    transition: all 0.3s ease-in; 
+    text-transform: capitalize;
+    cursor: context-menu;
+}
+
+.searchInput i{
+    transform: rotateY(180deg);
+    position: absolute;
+    padding: 5px;
+    margin-top: 6px;
+    color: blue
+}
+
+.searchInput input{
+    width: 94%;
+    font-size: 16px;
+    padding-left: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.searchInput input:active,
+.searchInput input:focus{
+    outline: none;
+    border: 2px solid;
+    border-color: blue;
+}
+
+.searchInput input:active i,
+.searchInput input:focus i{
+    color: blue;
+}
+
+.top h3{
+    margin-bottom: 10px;
+}
+
+.topApps{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.topApps img{
+    width: 30px;
+}
+
+
+
+.showApps{
+    width: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.showrecent img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.showrecent{
+    margin-top: 10px;
+    display: flex;
+}
+
+.banner,
+.recommended{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.recentQuick{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recentQuick h3{
+    margin-bottom: 20px;
+}
+
+.quick{
+    margin-right: 100px;
+}
+
+.showquick p:hover{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.showquick p i{
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.searchCategory{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.leftcat{
+    display: flex;
+}
+
+.leftcat p{
+    padding: 8px;
+}
+
+.rightcat i{
+    padding: 8px;
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.apps{
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.apps:hover{
+    background-color: #ffffff;
+    cursor: context-menu;
+}
+
+.apps img{
+    width: 40px;
+    height: 40px;
+}
+
+.reco{
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.reco:hover{
+    background-color: #ffffff;
+    cursor: context-menu;
+    border-radius: 5px;
+}
+
+.reco img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.recoText{
+    text-transform: capitalize;
+}
+
+
+.apps p{
+    text-transform: capitalize;
+}
+
+.all{
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+}
+
+.all:hover{
+    background-color: #f3f3f3;
+    cursor: context-menu;
+}
+
+.user{
+    background-color: #f3f3f3;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    align-items: center;
+}
+
+.user .username{
+    display: flex;
+    align-items: center;    
+}
+
+.user .username i{
+    font-size: 30px;
+    margin-left: 8px;
+    margin-right: 10px;
+}
+
+.user .size{
+    font-size: 22px;
+    padding: 10px;
+}
+
+.user .size:hover{
+    background-color: #ffffff;
+}
+
+.recoFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeIcons{
+    padding: 10px;
+}
+
+.applications{    
+    padding: 10px;
+    width: 70px;
+    text-align: center;
+}
+
+.applications:hover{
+    cursor: context-menu;
+    background-color: #dedede;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.applications img{
+    width: 50px;
+    text-align: center;
+}
+
+.applications h4{
+    color: white;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+
+
+#contextMenu{
+    position: fixed;
+    z-index: 1000000;
+    width: 250px;
+    background: #f3f3f3;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+#contextMenu.visible{
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+#contextMenu .item{
+    padding: 8px 10px;
+    font-size: 15px;
+    color: #000000;
+    cursor: context-menu;
+    border-radius: inherit;
+    text-transform: capitalize;
+}
+
+#contextMenu .item:hover{
+    background: #ffffff;
+}
+
+#contextMenu .item i{
+    margin-right: 5px;
+}
+
+.greyish{
+    color: #d3d3d3;
+}
+
+/* media query */
+@media (max-width:490px){
+    body{
+        background-color: #000000;
+        background-image: none;
+    }
+    .everything{
+        display: none;
+        color: white;
+    }
+    .warning{
+        display: block;
+    }
+}
